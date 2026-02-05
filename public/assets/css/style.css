@@ -1,0 +1,246 @@
+/* style.css */
+
+/* Optional: make navbar sticky and slightly transparent */
+.navbar.sticky-top {
+    backdrop-filter: blur(8px);
+    background-color: rgba(42, 0, 255, 0.85);
+}
+
+/* ===========================
+   GLOBAL FONT & BODY
+=========================== */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+/* Primary */
+.btn-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary */
+.btn-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+}
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+/* Success */
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #85e085);
+    color: #fff;
+}
+.btn-success:hover {
+    background: linear-gradient(135deg, #85e085, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Danger */
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    color: #fff;
+}
+.btn-danger:hover {
+    background: linear-gradient(135deg, #ff6b6b, #dc3545);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Warning */
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107, #ffdb4d);
+    color: #333;
+}
+.btn-warning:hover {
+    background: linear-gradient(135deg, #ffdb4d, #ffc107);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-weight: 600;
+}
+.card-text {
+    color: #555;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-weight: 600;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+/* ===========================
+   FORM CONTROLS
+=========================== */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 6px rgba(37, 117, 252, 0.3);
+    outline: none;
+}
+
+/* ===========================
+   ALERTS
+=========================== */
+.alert {
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+.alert:hover {
+    transform: translateY(-2px);
+}
+
+/* Soft gradient colors */
+.alert-primary {
+    background: linear-gradient(135deg, #c3cfff, #a1a9ff);
+    color: #1a1a1a;
+    border: none;
+}
+.alert-success {
+    background: linear-gradient(135deg, #c7f0d2, #8fe2b6);
+    color: #1a1a1a;
+    border: none;
+}
+.alert-danger {
+    background: linear-gradient(135deg, #f9c3c3, #f48b8b);
+    color: #1a1a1a;
+    border: none;
+}
+.alert-warning {
+    background: linear-gradient(135deg, #fff4c3, #ffe08f);
+    color: #1a1a1a;
+    border: none;
+}
+
+/* ===========================
+   BADGES
+=========================== */
+.badge {
+    border-radius: 12px;
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+.badge-success {
+    background: linear-gradient(135deg, #28a745, #85e085);
+    color: #fff;
+}
+.badge-danger {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    color: #fff;
+}
+.badge-warning {
+    background: linear-gradient(135deg, #ffc107, #ffdb4d);
+    color: #333;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-weight: 500;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffeb3b;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
