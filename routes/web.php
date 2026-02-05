@@ -33,8 +33,8 @@ Route::prefix('admin')->middleware(['auth', 'verified', 'permissions'])->group(f
     Route::get('/dashboard', function () {
         return view('admin/dashboard');
     })->name('admin.dashboard');
-    Route::resource('roles', RoleController::class)->only(['index', 'create', 'store']);
-    Route::resource('permissions', PermissionController::class)->only(['index', 'create', 'store']);
+    Route::resource('roles', RoleController::class);
+    Route::resource('permissions', PermissionController::class);
     Route::get('role-permissions', [RolePermissionController::class, 'index'])->name('role-permissions.index');
     Route::put('role-permissions/{role}', [RolePermissionController::class, 'update'])->name('role-permissions.update');
 });

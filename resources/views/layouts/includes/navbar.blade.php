@@ -1,16 +1,10 @@
 <nav class="navbar navbar-expand-lg sticky-top mb-5">
     <div class="container">
-        <!-- Brand -->
         <a class="navbar-brand" href="/">MyApp</a>
-
-        <!-- Toggler untuk mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Navbar content -->
         <div class="collapse navbar-collapse" id="navbarContent">
-            <!-- Kiri -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @guest
                     <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
@@ -19,8 +13,6 @@
 
                 @auth
                     <li class="nav-item"><a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a></li>
-
-                    <!-- Dropdown Role & Permission -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="roleDropdown" role="button"
                             data-bs-toggle="dropdown">
@@ -35,8 +27,6 @@
                     </li>
                 @endauth
             </ul>
-
-            <!-- Kanan -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 @guest
                     <li class="nav-item"><a class="btn btn-warning btn-sm me-2" href="{{ route('login') }}">Login</a></li>
@@ -44,7 +34,6 @@
                 @endguest
 
                 @auth
-                    <!-- Dropdown user -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                             data-bs-toggle="dropdown">

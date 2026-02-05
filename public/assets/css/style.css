@@ -96,11 +96,6 @@ body {
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-}
-
 .card-title {
     font-weight: 600;
 }
@@ -114,6 +109,11 @@ body {
     font-weight: 600;
     border-bottom: none;
     border-radius: 12px 12px 0 0 !important;
+}
+
+.card-animated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* ===========================

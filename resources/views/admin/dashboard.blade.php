@@ -8,8 +8,8 @@
         <p>Selamat datang, <strong>{{ auth()->user()->name }}</strong>!</p>
 
         <!-- ===========================
-                         BUTTONS
-                    =========================== -->
+                                     BUTTONS
+                                =========================== -->
         <section class="my-5">
             <h4>Buttons</h4>
             <button class="btn btn-primary me-2">Primary</button>
@@ -20,15 +20,15 @@
         </section>
 
         <!-- ===========================
-                         CARDS
-                    =========================== -->
+                                     CARDS
+                                =========================== -->
         <section class="my-5">
             <h4>Cards</h4>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card card-animated">
                         <div class="card-header">
-                            Header
+                            Header Animated
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Card Title 1</h5>
@@ -40,7 +40,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-header">
-                            Header
+                            Header Default
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Card Title 2</h5>
@@ -52,7 +52,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-header">
-                            Header
+                            Header Default
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Card Title 3</h5>
@@ -65,8 +65,8 @@
         </section>
 
         <!-- ===========================
-                         NAVBAR (STICKY TOP)
-                    =========================== -->
+                                     NAVBAR (STICKY TOP)
+                                =========================== -->
         <section class="my-5">
             <h4>Navbar</h4>
             <nav class="navbar navbar-expand-lg sticky-top mb-3">
@@ -88,8 +88,8 @@
         </section>
 
         <!-- ===========================
-                         FORM CONTROLS
-                    =========================== -->
+                                     FORM CONTROLS
+                                =========================== -->
         <section class="my-5">
             <h4>Forms</h4>
             <form>
@@ -110,8 +110,8 @@
         </section>
 
         <!-- ===========================
-                         ALERTS
-                    =========================== -->
+                                     ALERTS
+                                =========================== -->
         <section class="my-5">
             <h4>Alerts</h4>
             <div class="alert alert-primary" role="alert">This is a primary alert!</div>
@@ -121,8 +121,8 @@
         </section>
 
         <!-- ===========================
-                         TABLE
-                    =========================== -->
+                                     TABLE
+                                =========================== -->
         <section class="my-5">
             <h4>Table</h4>
             <table class="table table-striped table-hover">
@@ -158,8 +158,8 @@
         </section>
 
         <!-- ===========================
-                         BADGES & PROGRESS
-                    =========================== -->
+                                     BADGES & PROGRESS
+                                =========================== -->
         <section class="my-5">
             <h4>Badges & Progress</h4>
             <span class="badge bg-primary me-2">Primary</span>
@@ -173,8 +173,8 @@
         </section>
 
         <!-- ===========================
-                         MODAL
-                    =========================== -->
+                                     MODAL
+                                =========================== -->
         <section class="my-5">
             <h4>Modal</h4>
             <!-- Button trigger modal -->

@@ -32,4 +32,30 @@ class PermissionController extends Controller
         return redirect()->route('permissions.index')
             ->with('success', 'Permission created');
     }
+    public function edit(Permission $permission)
+    {
+        return view('permissions.edit', compact('permission'));
+    }
+
+    public function update(Request $request, Permission $permission)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255|unique:permissions,name,' . $permission->id
+        ]);
+
+        $permission->update([
+            'name' => $request->name
+        ]);
+
+        return redirect()->route('permissions.index')
+            ->with('success', 'Permission berhasil diupdate');
+    }
+
+    public function destroy(Permission $permission)
+    {
+        $permission->delete();
+
+        return redirect()->route('permissions.index')
+            ->with('success', 'Permission berhasil dihapus');
+    }
 }

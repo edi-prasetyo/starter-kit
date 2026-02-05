@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique()->comment('create-post, edit-post, delete-post etc.');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
