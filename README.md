@@ -15,7 +15,9 @@ Projek ini sudah menyediakan fondasi siap pakai agar kamu bisa langsung mengemba
 
 ### Fitur Utama yang Sudah Tersedia:
 
-- ✅ **Authentication (Login/Register)** dengan Role & Permission Access
+- ✅ **Authentication (Login/Register)**
+- ✅ **Register dengan Verify Email**
+- ✅ **Role & Permission Access**
 
 > Starter kit ini dirancang agar mudah dikembangkan. Kamu bisa menambahkan modul baru, fitur tambahan, atau menyesuaikan tampilan sesuai kebutuhan projek kamu. Cocok untuk dashboard, CMS, e-commerce, atau aplikasi internal.
 
