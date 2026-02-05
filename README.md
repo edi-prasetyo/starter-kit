@@ -35,6 +35,10 @@ QUEUE_CONNECTION=sync
 
 ```
 
+> Jika menggunakan mysql ubah "DB_CONNECTION=mysql" hilangkan semua tanda #
+
+---
+
 ## Instalasi
 
 ```bash
