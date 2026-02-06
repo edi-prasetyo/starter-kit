@@ -60,6 +60,11 @@ email : superadmin@example.com
 pass  : password
 ```
 
+- Author : Edi Prasetyo
+- License: MIT
+- Repo : https://github.com/edi-prasetyo/starter-kit
+- Site : https://grahastudio.com
+
 ![home](screenshoot/home.jpg)
 
 ![permission](screenshoot/permission.jpg)
