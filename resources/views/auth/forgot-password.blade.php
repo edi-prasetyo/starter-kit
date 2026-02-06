@@ -1,3 +1,13 @@
+<!--
+|--------------------------------------------------------------------------
+| Blade View: Forgot Password
+|--------------------------------------------------------------------------
+| Author : Edi Prasetyo
+| License: MIT
+| Repo   : https://github.com/edi-prasetyo/starter-kit
+| Site   : https://grahastudio.com
+|--------------------------------------------------------------------------
+-->
 @extends('layouts.app')
 @section('title', 'Forgot Password')
 

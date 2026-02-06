@@ -1,5 +1,14 @@
+<!--
+|--------------------------------------------------------------------------
+| Blade View: 403
+|--------------------------------------------------------------------------
+| Author : Edi Prasetyo
+| License: MIT
+| Repo   : https://github.com/edi-prasetyo/starter-kit
+| Site   : https://grahastudio.com
+|--------------------------------------------------------------------------
+-->
 @extends('layouts.app')
-
 @section('content')
     <div class="text-center mt-8">
         <h1>403 - Akses Ditolak</h1>

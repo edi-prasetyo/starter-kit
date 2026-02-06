@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @author Edi Prasetyo
+ * @license MIT
+ * @link https://github.com/edi-prasetyo/starter-kit
+ * @see https://grahastudio.com
+ */
+
 namespace App\Http\Middleware;
 
 use Closure;
@@ -14,10 +21,8 @@ class PermissionMiddleware
     public function handle(Request $request, Closure $next)
     {
         try {
-            // jalankan request
             return $next($request);
         } catch (AuthorizationException $e) {
-            // redirect back dengan flash message
             return redirect()->back()
                 ->with('error', 'Anda tidak memiliki akses ke halaman ini.');
         }

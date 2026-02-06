@@ -1,3 +1,13 @@
+<!--
+|--------------------------------------------------------------------------
+| Blade View: Verify Email
+|--------------------------------------------------------------------------
+| Author : Edi Prasetyo
+| License: MIT
+| Repo   : https://github.com/edi-prasetyo/starter-kit
+| Site   : https://grahastudio.com
+|--------------------------------------------------------------------------
+-->
 @extends('layouts.app')
 @section('title', 'Verify Email')
 

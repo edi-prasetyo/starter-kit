@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @author Edi Prasetyo
+ * @license MIT
+ * @link https://github.com/edi-prasetyo/starter-kit
+ * @see https://grahastudio.com
+ */
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;

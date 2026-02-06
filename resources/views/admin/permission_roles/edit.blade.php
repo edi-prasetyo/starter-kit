@@ -1,55 +1,66 @@
+<!--
+|--------------------------------------------------------------------------
+| Blade View: Edit Permission Role
+|--------------------------------------------------------------------------
+| Author : Edi Prasetyo
+| License: MIT
+| Repo   : https://github.com/edi-prasetyo/starter-kit
+| Site   : https://grahastudio.com
+|--------------------------------------------------------------------------
+-->
 @extends('layouts.app')
-
 @section('content')
-    <div class="mb-3">
-        <h3>Permission Role</h3>
-        <small class="text-muted">
-            Role: <strong>{{ $role->name }}</strong>
-        </small>
-    </div>
+    <div class="container my-5">
+        <div class="mb-3">
+            <h3>Permission Role</h3>
+            <small class="text-muted">
+                Role: <strong>{{ $role->name }}</strong>
+            </small>
+        </div>
 
-    <form method="POST" action="{{ route('permission-roles.update', $role->id) }}">
-        @csrf
-        @method('PUT')
+        <form method="POST" action="{{ route('permission-roles.update', $role->id) }}">
+            @csrf
+            @method('PUT')
 
-        @foreach ($permissions as $group => $groupPermissions)
-            <div class="card mb-3">
-                <div class="card-header">
-                    <label>
-                        <input type="checkbox" class="select-all form-check-input" data-group="{{ $group }}">
-                        {{ ucfirst($group) }}
-                    </label>
-                </div>
+            @foreach ($permissions as $group => $groupPermissions)
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <label>
+                            <input type="checkbox" class="select-all form-check-input" data-group="{{ $group }}">
+                            {{ ucfirst($group) }}
+                        </label>
+                    </div>
 
-                <div class="card-body">
-                    <div class="row">
-                        @foreach ($groupPermissions as $permission)
-                            <div class="col-md-4 mb-2">
-                                <label class="form-check">
-                                    <input class="form-check-input permission-{{ $group }}" type="checkbox"
-                                        name="permissions[]" value="{{ $permission->id }}"
-                                        {{ $role->permissions->contains($permission) ? 'checked' : '' }}>
-                                    <span class="form-check-label">
-                                        {{ $permission->name }}
-                                    </span>
-                                </label>
-                            </div>
-                        @endforeach
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach ($groupPermissions as $permission)
+                                <div class="col-md-4 mb-2">
+                                    <label class="form-check">
+                                        <input class="form-check-input permission-{{ $group }}" type="checkbox"
+                                            name="permissions[]" value="{{ $permission->id }}"
+                                            {{ $role->permissions->contains($permission) ? 'checked' : '' }}>
+                                        <span class="form-check-label">
+                                            {{ $permission->name }}
+                                        </span>
+                                    </label>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
+            @endforeach
+
+            <div class="mt-3">
+                <button class="btn btn-primary">
+                    Simpan Permission
+                </button>
+
+                <a href="{{ route('roles.index') }}" class="btn btn-secondary">
+                    Kembali
+                </a>
             </div>
-        @endforeach
-
-        <div class="mt-3">
-            <button class="btn btn-primary">
-                Simpan Permission
-            </button>
-
-            <a href="{{ route('roles.index') }}" class="btn btn-secondary">
-                Kembali
-            </a>
-        </div>
-    </form>
+        </form>
+    </div>
 @endsection
 
 @push('scripts')

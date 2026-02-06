@@ -1,3 +1,13 @@
+<!--
+|--------------------------------------------------------------------------
+| Blade View: Admin Dashboard
+|--------------------------------------------------------------------------
+| Author : Edi Prasetyo
+| License: MIT
+| Repo   : https://github.com/edi-prasetyo/starter-kit
+| Site   : https://grahastudio.com
+|--------------------------------------------------------------------------
+-->
 @extends('layouts.app')
 @section('title', 'Dashboard')
 
@@ -6,10 +16,7 @@
 
         <h3 class="mb-4">Dashboard</h3>
         <p>Selamat datang, <strong>{{ auth()->user()->name }}</strong>!</p>
-
-        <!-- ===========================
-                                     BUTTONS
-                                =========================== -->
+        {{-- BUTTONS --}}
         <section class="my-5">
             <h4>Buttons</h4>
             <button class="btn btn-primary me-2">Primary</button>
@@ -18,10 +25,7 @@
             <button class="btn btn-danger me-2">Danger</button>
             <button class="btn btn-warning me-2">Danger</button>
         </section>
-
-        <!-- ===========================
-                                     CARDS
-                                =========================== -->
+        {{-- CARDS --}}
         <section class="my-5">
             <h4>Cards</h4>
             <div class="row g-4">
@@ -63,10 +67,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- ===========================
-                                     NAVBAR (STICKY TOP)
-                                =========================== -->
+        {{-- NAVBAR --}}
         <section class="my-5">
             <h4>Navbar</h4>
             <nav class="navbar navbar-expand-lg sticky-top mb-3">
@@ -86,10 +87,7 @@
                 </div>
             </nav>
         </section>
-
-        <!-- ===========================
-                                     FORM CONTROLS
-                                =========================== -->
+        {{-- FORM --}}
         <section class="my-5">
             <h4>Forms</h4>
             <form>
@@ -108,10 +106,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
-
-        <!-- ===========================
-                                     ALERTS
-                                =========================== -->
+        {{-- ALERTS --}}
         <section class="my-5">
             <h4>Alerts</h4>
             <div class="alert alert-primary" role="alert">This is a primary alert!</div>
@@ -119,10 +114,7 @@
             <div class="alert alert-warning" role="alert">This is a warning alert!</div>
             <div class="alert alert-danger" role="alert">This is a danger alert!</div>
         </section>
-
-        <!-- ===========================
-                                     TABLE
-                                =========================== -->
+        {{-- TABLE --}}
         <section class="my-5">
             <h4>Table</h4>
             <table class="table table-striped table-hover">
@@ -156,10 +148,7 @@
                 </tbody>
             </table>
         </section>
-
-        <!-- ===========================
-                                     BADGES & PROGRESS
-                                =========================== -->
+        {{-- BADGE & PROGRESS --}}
         <section class="my-5">
             <h4>Badges & Progress</h4>
             <span class="badge bg-primary me-2">Primary</span>
@@ -171,18 +160,12 @@
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 40%"></div>
             </div>
         </section>
-
-        <!-- ===========================
-                                     MODAL
-                                =========================== -->
+        {{-- MODAL --}}
         <section class="my-5">
             <h4>Modal</h4>
-            <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch Demo Modal
             </button>
-
-            <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
                 <div class="modal-dialog">
                     <div class="modal-content">

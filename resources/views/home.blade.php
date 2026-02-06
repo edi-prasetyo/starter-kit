@@ -1,8 +1,17 @@
+<!--
+|--------------------------------------------------------------------------
+| Blade View: Home
+|--------------------------------------------------------------------------
+| Author : Edi Prasetyo
+| License: MIT
+| Repo   : https://github.com/edi-prasetyo/starter-kit
+| Site   : https://grahastudio.com
+|--------------------------------------------------------------------------
+-->
 @extends('layouts.app')
 
 @section('content')
     <div class="container my-5">
-        {{-- HERO SECTION --}}
         <div class="p-5 mb-4 rounded-4 text-white" style="background: linear-gradient(135deg, #6610f2, #0d6efd);">
             <div class="container py-4">
                 <div class="row">
@@ -30,8 +39,6 @@
 
             </div>
         </div>
-
-        {{-- FITUR UTAMA --}}
         <div class="row g-4 mb-4">
             <div class="col-md-6 col-lg-3">
                 <div class="card card-animated h-100 shadow-sm">
@@ -81,8 +88,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- PANDUAN + AKSES --}}
         <div class="row g-4">
             <div class="col-md-8">
                 <div class="card shadow-sm">
@@ -114,8 +119,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- CTA BAWAH --}}
         <div class="text-center mt-5">
             <h4 class="fw-bold">Siap Mulai Mengembangkan?</h4>
             <p class="text-muted">

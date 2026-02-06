@@ -59,3 +59,7 @@ Login menggunakan Akun
 email : superadmin@example.com
 pass  : password
 ```
+
+![home](screenshoot/home.jpg)
+
+![permission](screenshoot/permission.jpg)
