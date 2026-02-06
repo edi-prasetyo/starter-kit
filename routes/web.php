@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\EmailSettingController;
 use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\PermissionRoleController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\RolePermissionController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -12,9 +14,10 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+// Public
+Route::get('/', [HomeController::class, 'index'])->name('home');
 // Guest
 Route::middleware('guest')->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('register', [RegisterController::class, 'showForm'])->name('register');
     Route::post('register', [RegisterController::class, 'register']);
 
@@ -35,8 +38,13 @@ Route::prefix('admin')->middleware(['auth', 'verified', 'permissions'])->group(f
     })->name('admin.dashboard');
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
-    Route::get('role-permissions', [RolePermissionController::class, 'index'])->name('role-permissions.index');
-    Route::put('role-permissions/{role}', [RolePermissionController::class, 'update'])->name('role-permissions.update');
+    Route::get('/permission-roles/{role}', [PermissionRoleController::class, 'edit'])
+        ->name('permission-roles.edit');
+    Route::put('/permission-roles/{role}', [PermissionRoleController::class, 'update'])
+        ->name('permission-roles.update');
+
+    Route::get('/email-settings', [EmailSettingController::class, 'index'])->name('email-settings.index');
+    Route::post('/email-settings', [EmailSettingController::class, 'store'])->name('email-settings.store');
 });
 
 // Authenticated

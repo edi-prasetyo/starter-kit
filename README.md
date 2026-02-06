@@ -25,6 +25,8 @@ Projek ini sudah menyediakan fondasi siap pakai agar kamu bisa langsung mengemba
 
 ## Setup file .env
 
+Buat file .env lalu copy semua yang ada di .env.example ke .env
+
 ```bash
 DB_CONNECTION=sqlite
 # DB_HOST=127.0.0.1
@@ -45,5 +47,15 @@ QUEUE_CONNECTION=sync
 
 ```bash
 composer install
+php artisan key:generate
 php artisan migrate --seed
+php artisan serve
+```
+
+Akases ke browser default : http://localhost:8000
+Login menggunakan Akun
+
+```bash
+email : superadmin@example.com
+pass  : password
 ```

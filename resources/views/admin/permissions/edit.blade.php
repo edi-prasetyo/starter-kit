@@ -3,18 +3,18 @@
     <div class="col-md-6 mx-auto">
         <div class="card">
             <div class="card-header">
-                Create Permission
+                Edit Permission
             </div>
             <div class="card-body">
-
-                <form method="POST" action="{{ route('permissions.store') }}">
+                <form method="POST" action="{{ route('permissions.update', $permission->id) }}">
                     @csrf
+                    @method('PUT')
                     <div class="form-group mb-3">
                         <label class="form-label">Nama Permission</label>
-                        <input type="text" name="name" class="form-control" placeholder="permission-name">
+                        <input type="text" name="name" value="{{ old('name', $permission->name) }}" class="form-control"
+                            required>
                     </div>
-
-                    <button class="btn btn-primary" type="submit">Save</button>
+                    <button class="btn btn-primary" type="submit">Update</button>
                 </form>
             </div>
         </div>

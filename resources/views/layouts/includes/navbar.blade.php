@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg sticky-top mb-5">
+<nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
         <a class="navbar-brand" href="/">MyApp</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -8,7 +8,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @guest
                     <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/helps') }}">Helps</a></li>
+
                 @endguest
 
                 @auth
@@ -21,8 +21,16 @@
                         <ul class="dropdown-menu" aria-labelledby="roleDropdown">
                             <li><a class="dropdown-item" href="{{ route('roles.index') }}">Role</a></li>
                             <li><a class="dropdown-item" href="{{ route('permissions.index') }}">Permission</a></li>
-                            <li><a class="dropdown-item" href="{{ route('role-permissions.index') }}">Permission Role</a>
-                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="settingDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="settingDropdown">
+                            <li><a class="dropdown-item" href="{{ route('email-settings.index') }}">Email</a></li>
+
                         </ul>
                     </li>
                 @endauth
@@ -40,7 +48,7 @@
                             {{ auth()->user()->name }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+
                             <li>
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf

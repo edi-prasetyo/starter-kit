@@ -3,7 +3,7 @@
     <div class="col-md-6 mx-auto">
         <div class="card">
             <div class="card-header">
-                <h3>Create Role</h3>
+                Create Role
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('roles.store') }}">

@@ -4,7 +4,7 @@
     <div class="col-md-6 mx-auto">
         <div class="card">
             <div class="card-header">
-                <h3>Edit Role</h3>
+                Edit Role
             </div>
             <div class="card-body">
 

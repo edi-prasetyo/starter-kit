@@ -1,120 +1,129 @@
 @extends('layouts.app')
+
 @section('content')
-    <div class="container py-4">
-        <div class="page-wrapper bg-body">
+    <div class="container my-5">
+        {{-- HERO SECTION --}}
+        <div class="p-5 mb-4 rounded-4 text-white" style="background: linear-gradient(135deg, #6610f2, #0d6efd);">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="display-5 fw-bold">
+                            Laravel Starter Kit
+                        </h1>
+                        <p class="fs-5">
+                            Fondasi siap pakai untuk membangun aplikasi web Laravel dengan
+                            Authentication, Role & Permission, dan fitur pendukung lainnya.
+                        </p>
+                        <div class="mt-4">
+                            <a href="{{ route('login') }}" class="btn btn-light btn-lg me-2">
+                                🔐 Login
+                            </a>
+                            <a href="{{ route('register') }}" class="btn btn-primary btn-lg">
+                                ✨ Register
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <span style="font-size: 150px">🚀</span>
+                    </div>
+                </div>
 
-            <h1 class="page-title">Selamat Datang di Laravel Starter Kit</h1>
-            <p class="page-subtitle">
-                Ini adalah proyek awal yang sudah siap dikembangkan untuk berbagai aplikasi web.
-                Starter kit ini dilengkapi fitur dasar yang umum dibutuhkan.
+            </div>
+        </div>
+
+        {{-- FITUR UTAMA --}}
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-animated h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-2">🔑</div>
+                        <h5 class="card-title">Authentication</h5>
+                        <p class="card-text text-muted">
+                            Login & Register lengkap dengan Role dan Permission.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-animated h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-2">📨</div>
+                        <h5 class="card-title">Email Setting</h5>
+                        <p class="card-text text-muted">
+                            Konfigurasi email untuk verifikasi user.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-animated h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-2">🥇</div>
+                        <h5 class="card-title">Help Center</h5>
+                        <p class="card-text text-muted">
+                            Panduan penggunaan starter kit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-animated h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-2">🛡️</div>
+                        <h5 class="card-title">Legal Pages</h5>
+                        <p class="card-text text-muted">
+                            Terms of Service & Privacy Policy siap pakai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- PANDUAN + AKSES --}}
+        <div class="row g-4">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header fw-semibold">
+                        📌 Panduan Singkat
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Kelola akses user menggunakan Role & Permission.</li>
+                            <li>Sesuaikan Email Setting untuk verifikasi user.</li>
+                            <li>Gunakan struktur ini sebagai fondasi dashboard, CMS, atau aplikasi internal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm border-primary">
+                    <div class="card-header bg-primary text-white fw-semibold">
+                        🔐 Login Awal
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-1"><strong>Email:</strong> <code>superadmin@example.com</code></p>
+
+
+                        <p class="mt-3 mb-1"><strong>Password:</strong> <code>password</code> </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- CTA BAWAH --}}
+        <div class="text-center mt-5">
+            <h4 class="fw-bold">Siap Mulai Mengembangkan?</h4>
+            <p class="text-muted">
+                Tambahkan modul baru dan sesuaikan tampilan sesuai kebutuhan projekmu.
             </p>
-
-            <div class="section">
-                <h2 class="section-title">Fitur Utama</h2>
-                <div class="card content-text">
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>✅ <strong>Authentication (Login/Register)</strong> dengan proteksi Role & Permission Access</li>
-                        <li>✅ <strong>App & System Setting</strong> untuk mengatur konfigurasi aplikasi dan sistem</li>
-                        <li>✅ <strong>Help Center</strong> untuk panduan penggunaan</li>
-                        <li>✅ <strong>Terms of Service</strong> & <strong>Privacy Policy</strong> siap pakai</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Panduan Singkat</h2>
-                <div class="card content-text">
-                    <p>Starter kit ini dibuat agar kamu bisa langsung memulai projek Laravel dan fokus menambahkan fitur
-                        sesuai kebutuhan. Beberapa tips:</p>
-                    <ul>
-                        <li>Eksplorasi fitur Auth dan Role & Permission untuk mengatur akses pengguna.</li>
-                        <li>Sesuaikan App & System Setting dengan kebutuhan aplikasi kamu.</li>
-                        <li>Gunakan Help Center untuk menambahkan dokumentasi aplikasi kamu sendiri.</li>
-                        <li>Update Terms of Service & Privacy Policy sesuai kebijakan aplikasi yang kamu bangun.</li>
-                        <li>Gunakan struktur ini sebagai fondasi untuk berbagai proyek web Laravel: dashboard, CMS, aplikasi
-                            internal, atau e-commerce.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">Mulai Mengembangkan</h2>
-                <div class="card content-text">
-                    <p>Selanjutnya, kamu bisa langsung menambahkan modul baru, fitur tambahan, atau menyesuaikan tampilan
-                        agar sesuai kebutuhan projek. Starter kit ini sudah siap dipakai dan mudah dikembangkan.</p>
-                </div>
-            </div>
-
+            <a href="{{ route('dashboard') }}" class="btn btn-primary btn-lg">
+                🚀 Masuk Dashboard
+            </a>
         </div>
     </div>
 @endsection
-
-@push('styles')
-    <style>
-        :root {
-            --primary: #4f46e5;
-            --primary-soft: #eef2ff;
-            --dark: #0f172a;
-            --muted: #64748b;
-            --border: #e5e7eb;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --radius: 14px;
-        }
-
-
-
-        .page-wrapper {
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        .page-title {
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-subtitle {
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .section-title::before {
-            content: "";
-            width: 4px;
-            height: 18px;
-            background: var(--primary);
-            border-radius: 999px;
-        }
-
-        .card {
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-        }
-
-        .content-text ul {
-            padding-left: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .content-text li {
-            margin-bottom: 0.5rem;
-        }
-    </style>
-@endpush

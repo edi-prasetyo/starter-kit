@@ -16,13 +16,13 @@ class PermissionController extends Controller
 
     public function create()
     {
-        $this->authorize('create-permission');
+        $this->authorize('permission-create');
         return view('admin.permissions.create');
     }
 
     public function store(Request $request)
     {
-        $this->authorize('store-permission');
+        $this->authorize('permission-store');
         $request->validate([
             'name' => 'required|unique:permissions,name'
         ]);
@@ -34,11 +34,13 @@ class PermissionController extends Controller
     }
     public function edit(Permission $permission)
     {
-        return view('permissions.edit', compact('permission'));
+        $this->authorize('permission-edit');
+        return view('admin.permissions.edit', compact('permission'));
     }
 
     public function update(Request $request, Permission $permission)
     {
+        $this->authorize('permission-update');
         $request->validate([
             'name' => 'required|string|max:255|unique:permissions,name,' . $permission->id
         ]);
@@ -53,6 +55,7 @@ class PermissionController extends Controller
 
     public function destroy(Permission $permission)
     {
+        $this->authorize('permission-delete');
         $permission->delete();
 
         return redirect()->route('permissions.index')

@@ -31,6 +31,10 @@ class PermissionSeeder extends Seeder
                 'name' => 'permission-update',
                 'description' => 'Update Data Permission'
             ],
+            [
+                'name' => 'permission-delete',
+                'description' => 'Update Data Permission'
+            ],
             // Role
             [
                 'name' => 'role-index',
@@ -50,6 +54,28 @@ class PermissionSeeder extends Seeder
             ],
             [
                 'name' => 'role-update',
+                'description' => 'Role Data Permission'
+            ],
+            [
+                'name' => 'role-delete',
+                'description' => 'Role Data Permission'
+            ],
+            // permissionRole
+            [
+                'name' => 'permissionRole-edit',
+                'description' => 'Role Data Permission'
+            ],
+            [
+                'name' => 'permissionRole-update',
+                'description' => 'Role Data Permission'
+            ],
+            // Email
+            [
+                'name' => 'email-edit',
+                'description' => 'Role Data Permission'
+            ],
+            [
+                'name' => 'email-store',
                 'description' => 'Role Data Permission'
             ],
         ]);

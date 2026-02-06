@@ -2,11 +2,11 @@
 @section('title', 'Register')
 
 @section('content')
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+    <div class="container my-5">
+        <div class="col-md-6 mx-auto">
             <div class="card">
                 <div class="card-header">
-                    <h3>Register</h3>
+                    <h5>Register</h5>
                 </div>
 
                 <div class="card-body">

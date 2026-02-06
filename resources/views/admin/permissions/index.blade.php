@@ -1,24 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Permissions</h3>
+        <a href="{{ route('permissions.create') }}" class="btn btn-primary">
+            + Add Permission
+        </a>
+    </div>
 
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h3>Permissions</h3>
-            <a href="{{ route('permissions.create') }}" class="btn btn-primary">
-                + Add Permission
-            </a>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
         </div>
+    @endif
 
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+    <div class="card border">
+        <div class="card-header">
+            Permission data
+        </div>
 
         <div class="table-responsive">
             <table class="table table-striped table-hover align-middle">
-                <thead>
+                <thead class="table-dark">
                     <tr>
                         <th style="width:60px">#</th>
                         <th>Permission Name</th>
@@ -36,10 +39,10 @@
                                 </a>
 
                                 <form action="{{ route('permissions.destroy', $permission) }}" method="POST"
-                                    class="d-inline" onsubmit="return confirm('Yakin hapus permission ini?')">
+                                    class="d-inline delete-form">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-sm btn-danger">
+                                    <button type="button" class="btn btn-sm btn-danger btn-delete">
                                         Delete
                                     </button>
                                 </form>
@@ -55,6 +58,32 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.btn-delete').forEach(button => {
+                button.addEventListener('click', function() {
+                    const form = this.closest('.delete-form');
+
+                    Swal.fire({
+                        title: 'Yakin ingin menghapus?',
+                        text: 'Data permission yang dihapus tidak bisa dikembalikan!',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Ya, hapus!',
+                        cancelButtonText: 'Batal'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+@endpush
